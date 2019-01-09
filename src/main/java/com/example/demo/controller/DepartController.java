@@ -17,9 +17,9 @@ public class DepartController{
      * 获取部门列表
      * */
     @GetMapping
-    private ModelAndView getEmployeeList(Model model){
+    private void getEmployeeList(Model model){
         model.addAttribute("employeeList", departService.queryDepartList());
-        return new ModelAndView("employee/list","employeeModel",model);
+        //return new ModelAndView("employee/list","employeeModel",model);
     }
 
     /**

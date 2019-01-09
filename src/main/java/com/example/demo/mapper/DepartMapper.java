@@ -2,11 +2,10 @@ package com.example.demo.mapper;
 
 
 import com.example.demo.entity.Depart;
-import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
-public interface DepartMapper extends Mapper {
+public interface DepartMapper {
     int deleteByPrimaryKey(Long id);
 
     int insertSelective(Depart record);
