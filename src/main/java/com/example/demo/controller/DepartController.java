@@ -14,7 +14,7 @@ public class DepartController{
     private DepartService departService;
 
     /**
-     * 获取部门列表
+     * 获取部门列表s
      * */
     @GetMapping
     private void getEmployeeList(Model model){
