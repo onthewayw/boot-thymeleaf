@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import javax.xml.bind.annotation.XmlRootElement;
+
 import java.io.Serializable;
 
 @XmlRootElement
@@ -39,4 +40,23 @@ public class Depart implements Serializable {
     public void setDeptIntro(String deptIntro) {
         this.deptIntro = deptIntro;
     }
+
+	public Depart() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Depart(Long id, String deptName, String deptIntro) {
+		super();
+		this.id = id;
+		this.deptName = deptName;
+		this.deptIntro = deptIntro;
+	}
+
+	@Override
+	public String toString() {
+		return "Depart [id=" + id + ", deptName=" + deptName + ", deptIntro="
+				+ deptIntro + "]";
+	}
+    
 }

@@ -15,4 +15,7 @@ public interface EmployeeService {
     int updateByPrimaryKeySelective(Employee record);
 
     List<Employee> queryEmployeeList();
+    
+    List<Employee> queryEmpByDeptId(Long id);
+    
 }

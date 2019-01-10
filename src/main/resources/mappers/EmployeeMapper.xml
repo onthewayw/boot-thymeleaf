@@ -12,6 +12,14 @@
   <sql id="Base_Column_List" >
     id, dept_id, name, card_no
   </sql>
+  
+  <select id="queryEmpByDeptId" resultMap="BaseResultMap" parameterType="java.lang.Long">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from employee
+  	where dept_id=#{id,jdbcType=BIGINT}
+  </select>
+  
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />

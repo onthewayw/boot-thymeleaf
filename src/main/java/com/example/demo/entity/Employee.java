@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import javax.xml.bind.annotation.XmlRootElement;
+
 import java.io.Serializable;
 
 @XmlRootElement
@@ -15,13 +16,10 @@ public class Employee implements Serializable {
     //员工名字
     private String name;
 
-    //员工年龄
-    private Integer age;
-
     // 员工卡号
     private String cardNo;
-
-    public Long getId() {
+    
+	public Long getId() {
         return id;
     }
 
@@ -45,13 +43,7 @@ public class Employee implements Serializable {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+   
 
     public String getCardNo() {
         return cardNo;
@@ -60,4 +52,27 @@ public class Employee implements Serializable {
     public void setCardNo(String cardNo) {
         this.cardNo = cardNo;
     }
+
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(Long id, Long deptId, String name, 
+			String cardNo) {
+		super();
+		this.id = id;
+		this.deptId = deptId;
+		this.name = name;
+		this.cardNo = cardNo;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", deptId=" + deptId + ", name=" + name
+				+ ", cardNo=" + cardNo + "]";
+	}
+
+	
+    
 }
